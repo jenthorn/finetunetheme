@@ -1,0 +1,158 @@
+section.header{
+
+	.logo{
+		width: 587px;
+		margin: 0 auto;
+		padding-top: 155px;
+	}
+
+	h2, 
+	h3{
+		text-align: center;
+	}
+
+	h2{
+		text-align: center;
+		font-size: 40px;
+		margin-top: 75px;
+		position: relative;
+		&:after{
+			content: '';
+			position: absolute;
+			left: 50%;
+			bottom: -33%;	
+			transform: translate(-50%, -50%);			
+			display: block;
+			width: 50px;
+			height: 3px;
+			background: black; 
+		}
+	}
+
+	h3{
+		font-weight: 400;
+		font-size: 20px;
+		width: 80%;
+		margin: 0 auto;
+	}
+}
+
+// THREE INTRO BOXES UNDER HEADER
+section.intro-boxes{
+	padding: 2% 0 10% 0; 
+
+	ul.three-intro-boxes{
+
+		li{
+			float: left;
+			width: 31.3%;
+			margin-right: 3%;
+			position: relative;
+
+			@include tablet {
+				float: none;
+				width: 80%;
+				margin: 0 auto;
+				margin-bottom: 50px;
+			}
+
+			a{
+				position: relative;
+				display: inline-block;
+			}
+			
+			h4{
+				font-size: 1.3em;
+				color: white;
+				letter-spacing: 3.2px;
+				position: absolute;
+				margin: 0;
+				padding: 0;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+		}
+
+		.overlay:hover{
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: rgba(255,255,255, 0.9);
+			h4{
+				color: black;
+			}
+		}
+
+		li:last-child{
+			margin-right: 0;
+
+			@include tablet {
+				margin-right: auto;
+			}
+
+		}
+	}
+	
+}
+
+
+// TWO BIG LINK BOXES 
+.big-links{
+	.link{
+		float: left;
+		width: 45%;
+
+		@include tablet {
+			float: none;
+			width: 100%;
+		}
+
+		h4{
+			text-align: center;
+			position: relative;
+			padding-bottom: 20px;
+			font-size: 1.3em;
+			&:after{
+				content: '';
+				position: absolute;
+				left: 50%;
+				bottom: 0;	
+				transform: translate(-50%, -50%);			
+				display: block;
+				width: 50px;
+				height: 3px;
+				background: black;
+			}
+		}
+	}
+
+	// instagram
+	.link-one{
+		margin-right: 10%;
+		
+		// to remove user info above feed
+		.wdi_header_user_text  {
+			display: none !important;
+		}
+
+		// to remove load button at end of feed
+		.wdi_load_more{
+			display: none !important;
+		}
+	}
+
+	.colour-box{
+		text-align: center;
+		background: white;
+		border: 5px solid black;
+		padding: 200px;
+		margin-top: 42px;
+	}
+
+}
+
+

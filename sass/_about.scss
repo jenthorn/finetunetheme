@@ -1,0 +1,130 @@
+body{
+	background: white;
+}
+
+section.intro-heading{
+
+	h1{
+		font-size: 3.2em;
+		text-align: center;
+		width: 84%;
+		margin: 0 auto;
+		padding-top: 105px;
+		margin-bottom: 30px;
+		text-transform: uppercase;
+	}
+
+	h2{
+		font-size: 2em;
+		font-style: italic;
+		text-align: center;
+		font-weight: 400;
+		width: 80%;
+		margin: 0 auto;
+		&:before{
+			content: '';
+			width: 100px;
+			display: block;
+			height: 3px;
+			background: black;
+			margin: 0 auto;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+section.about-cols{
+	padding-top: 100px;
+
+	.col{
+		float: left;
+		width: 30%;
+		margin-right: 5%;
+	}
+
+	.contact-col{
+		margin-right: 0;
+
+		input,
+		textarea{
+			padding: 10px;
+			border: 1px solid black;
+		}
+
+		::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		  color: #777;
+		}
+		::-moz-placeholder { /* Firefox 19+ */
+		  color: #777;
+		}
+		:-ms-input-placeholder { /* IE 10+ */
+		  color: #777;
+		}
+		:-moz-placeholder { /* Firefox 18- */
+		  color: #777;
+		}
+
+		input[type=submit]{
+			color: black;
+			font-size: 16px;
+			letter-spacing: 0.44px;
+			text-transform: uppercase;
+			font-family: 'Lato', sans-serif;
+			font-weight: 700;
+			width: 116%;
+			background: white;
+			border: 5px solid black;
+		}
+
+	}
+
+	.wrapper{
+		position: relative;
+	}
+
+	.contact-links{
+		width: 20%;
+		position: absolute; 
+		top: 70%;
+		left: 0;
+
+		h5{
+			margin-top: 0;
+			margin-bottom: 10px;
+		}
+
+		i{
+			margin-right: 10px;
+			font-size: 20px;
+		}
+	}
+}
+
+section.instructors{
+	padding-top: 50px;
+
+	.instructorsRow {
+		background: black;
+	}
+
+
+	.instructorbio{
+		width: 50%;
+		color: white;
+		float: left;
+		h4{
+			font-size: 1.3em;
+		}
+	}
+
+	.instructorphoto {
+		width: 50%;
+		float: left;
+
+		img {
+			display: block;
+		}
+	}
+
+}
+

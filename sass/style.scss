@@ -1,0 +1,70 @@
+/*!
+* Theme Name: Fine Tune Pilates
+* Theme URI: http://hackeryou.com;
+* Description: Starter theme for building any website. Created by HackerYou. * Rename this to your own theme page.
+* Version: 1.0
+* Author: HackerYou
+* Author URI: http://hackeryou.com
+*/
+
+@import 'mixins';
+@import 'normalize';
+@import 'typography';
+@import 'navigation';
+@import 'sidebar';
+@import 'comments';
+@import 'footer';
+@import 'homepage';
+@import 'about';
+/*
+====================================
+Default Styling
+====================================
+*/
+
+.wrapper{
+	max-width: 1025px;
+	margin: 0 auto;
+
+	@include tablet {
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+
+
+}
+
+img {
+	max-width: 100%;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+	li{
+		margin: 0;
+		padding: 0;
+	}
+}
+
+ul.reviews {
+	padding: 0 50px;
+	li {
+		width: 100%;
+		// padding: 0 100px;
+	}
+}
+
+// to be decided on links hover
+a:hover{
+	text-decoration: none;
+	color: #001389;
+}
+
+
+
+
+
+
+
+
