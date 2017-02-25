@@ -1,7 +1,3 @@
-body{
-	background: white;
-}
-
 section.intro-heading{
 
 	h1{
@@ -9,7 +5,6 @@ section.intro-heading{
 		text-align: center;
 		width: 84%;
 		margin: 0 auto;
-		padding-top: 105px;
 		margin-bottom: 30px;
 		text-transform: uppercase;
 	}
@@ -26,7 +21,7 @@ section.intro-heading{
 			width: 100px;
 			display: block;
 			height: 3px;
-			background: black;
+			background: $black;
 			margin: 0 auto;
 			margin-bottom: 20px;
 		}
@@ -47,8 +42,9 @@ section.about-cols{
 
 		input,
 		textarea{
+			width: 100%;
 			padding: 10px;
-			border: 1px solid black;
+			border: 1px solid $black;
 		}
 
 		::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -65,15 +61,14 @@ section.about-cols{
 		}
 
 		input[type=submit]{
-			color: black;
+			color: $black;
 			font-size: 16px;
 			letter-spacing: 0.44px;
 			text-transform: uppercase;
 			font-family: 'Lato', sans-serif;
 			font-weight: 700;
-			width: 116%;
 			background: white;
-			border: 5px solid black;
+			border: 5px solid $black;
 		}
 
 	}
@@ -84,7 +79,7 @@ section.about-cols{
 
 	.contact-links{
 		width: 20%;
-		position: absolute; 
+		position: absolute;
 		top: 70%;
 		left: 0;
 
@@ -104,11 +99,15 @@ section.instructors{
 	padding-top: 50px;
 
 	.instructorsRow {
-		background: black;
+		background: $black;
+	}
+
+	.instructorsRow:nth-child(odd) > .instructorbio {
+		text-align: right;
 	}
 
 
-	.instructorbio{
+	.instructorbio {
 		width: 50%;
 		color: white;
 		float: left;
@@ -127,4 +126,3 @@ section.instructors{
 	}
 
 }
-

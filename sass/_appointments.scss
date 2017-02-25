@@ -1,0 +1,35 @@
+.overlay-active {
+  overflow: hidden;
+}
+
+.booking__overlay {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,.95);
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
+
+  &--active {
+    display: flex;
+  }
+
+  &-content {
+    position: relative;
+    padding: 0 45px;
+  }
+
+  &-close {
+    cursor: pointer;
+    position: absolute;
+    right: -10px;
+    top: -50px;
+    font-size: 36px;
+    line-height: 1;
+  }
+}

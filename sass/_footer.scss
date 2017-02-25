@@ -3,12 +3,12 @@ footer {
 	margin-top: 200px;
 
 	.wrapper{
-		border-top: 5px solid black;
+		border-top: 5px solid $black;
 	}
 
 	.social-links{
 		padding: 25px 0;
-		background: black;
+		background: $black;
 		margin-bottom: 30px;
 
 		ul{
@@ -36,7 +36,7 @@ footer {
 		.contact{
 			margin-top: 5px;
 		}
-		
+
 		.address{
 			margin-top: 25px;
 			&:before{
@@ -44,7 +44,7 @@ footer {
 				width: 50px;
 				display: block;
 				height: 1px;
-				background: black;
+				background: $black;
 				margin: 0 auto;
 				margin-bottom: 20px;
 			}
@@ -61,6 +61,6 @@ footer {
 
 .copywrite{
 	margin-top: 50px;
-	font-size: 10px; 
+	font-size: 10px;
 	text-align: center;
 }

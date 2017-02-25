@@ -1,12 +1,30 @@
 section.header{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 80px 0;
+	position: relative;
 
-	.logo{
-		width: 587px;
-		margin: 0 auto;
-		padding-top: 155px;
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background: radial-gradient(rgba(255, 255, 255, .8) 30%, rgba(255, 255, 255, .5));
 	}
 
-	h2, 
+	.header__content {
+		position: relative;
+		z-index: 1;
+	}
+
+	.logo{
+		max-width: 587px;
+		margin: 0 auto;
+	}
+
+	h2,
 	h3{
 		text-align: center;
 	}
@@ -20,12 +38,12 @@ section.header{
 			content: '';
 			position: absolute;
 			left: 50%;
-			bottom: -33%;	
-			transform: translate(-50%, -50%);			
+			bottom: -33%;
+			transform: translate(-50%, -50%);
 			display: block;
 			width: 50px;
 			height: 3px;
-			background: black; 
+			background: $black;
 		}
 	}
 
@@ -39,7 +57,7 @@ section.header{
 
 // THREE INTRO BOXES UNDER HEADER
 section.intro-boxes{
-	padding: 2% 0 10% 0; 
+	padding: 80px 0;
 
 	ul.three-intro-boxes{
 
@@ -48,6 +66,10 @@ section.intro-boxes{
 			width: 31.3%;
 			margin-right: 3%;
 			position: relative;
+
+			img {
+				display: block;
+			}
 
 			@include tablet {
 				float: none;
@@ -60,30 +82,35 @@ section.intro-boxes{
 				position: relative;
 				display: inline-block;
 			}
-			
+
 			h4{
 				font-size: 1.3em;
 				color: white;
 				letter-spacing: 3.2px;
-				position: absolute;
 				margin: 0;
 				padding: 0;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
+				transition: all .3s;
 			}
 
 		}
 
-		.overlay:hover{
+		.overlay {
 			position: absolute;
 			top: 0;
-			right: 0;
-			bottom: 0;
 			left: 0;
-			background: rgba(255,255,255, 0.9);
-			h4{
-				color: black;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: rgba(255,255,255,0);
+			transition: all .3s;
+
+			&:hover {
+				background: rgba(255,255,255, .6);
+				h4 {
+					color: $black;
+				}
 			}
 		}
 
@@ -96,11 +123,11 @@ section.intro-boxes{
 
 		}
 	}
-	
+
 }
 
 
-// TWO BIG LINK BOXES 
+// TWO BIG LINK BOXES
 .big-links{
 	.link{
 		float: left;
@@ -120,12 +147,12 @@ section.intro-boxes{
 				content: '';
 				position: absolute;
 				left: 50%;
-				bottom: 0;	
-				transform: translate(-50%, -50%);			
+				bottom: 0;
+				transform: translate(-50%, -50%);
 				display: block;
 				width: 50px;
 				height: 3px;
-				background: black;
+				background: $black;
 			}
 		}
 	}
@@ -133,7 +160,7 @@ section.intro-boxes{
 	// instagram
 	.link-one{
 		margin-right: 10%;
-		
+
 		// to remove user info above feed
 		.wdi_header_user_text  {
 			display: none !important;
@@ -148,11 +175,9 @@ section.intro-boxes{
 	.colour-box{
 		text-align: center;
 		background: white;
-		border: 5px solid black;
+		border: 5px solid $black;
 		padding: 200px;
 		margin-top: 42px;
 	}
 
 }
-
-

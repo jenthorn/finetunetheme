@@ -7,6 +7,10 @@
 * Author URI: http://hackeryou.com
 */
 
+// Variables
+$black: #212121;
+$white: #f3f3f3;
+
 @import 'mixins';
 @import 'normalize';
 @import 'typography';
@@ -16,11 +20,18 @@
 @import 'footer';
 @import 'homepage';
 @import 'about';
+@import 'appointments';
 /*
 ====================================
 Default Styling
 ====================================
 */
+
+body {
+	background: #fdfdfd;
+	padding-top: 86px;
+}
+
 
 .wrapper{
 	max-width: 1025px;
@@ -60,11 +71,3 @@ a:hover{
 	text-decoration: none;
 	color: #001389;
 }
-
-
-
-
-
-
-
-

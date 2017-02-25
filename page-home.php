@@ -9,13 +9,15 @@ get_header();  ?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-<section class="header" style="background-image: url(<?php the_field('header_image') ;  ?>);background-size: cover; background-repeat: no-repeat; height: 85vh;">
+<section class="header" style="background-image: url(<?php the_field('header_image') ;  ?>);">
 	<div class="wrapper">
-		<div class="logo">
-			<img src="<?php the_field('logo'); ?>" alt="">
+		<div class="header__content">
+			<div class="logo">
+				<img src="<?php the_field('logo'); ?>" alt="">
+			</div>
+			<h2><?php the_field('title'); ?></h2>
+			<h3><?php the_field('intro') ?></h3>
 		</div>
-		<h2><?php the_field('title'); ?></h2>
-		<h3><?php the_field('intro') ?></h3>
 	</div>
 </section>
 
@@ -58,7 +60,7 @@ get_header();  ?>
 
 
 <!-- <footer>
-	
+
 	<ul class="socialmedianav">
 	<?php if( have_rows('social_media_links')): ?>
 		<?php while( have_rows('social_media_links')): the_row(); ?>
